@@ -26,22 +26,14 @@ Examples of postcodes within and outside the M25 are as follows, you can't rely 
 
 Bonus marks if you can also identify if an invalid Postcode has been entered
 
-<<<<<<< HEAD
 #### Within
-=======
-####Within
->>>>>>> master
 
 - SW11 2RD
 - W1B2QD
 - E17 4RD
 - NW1 2AR
 
-<<<<<<< HEAD
 #### Outside
-=======
-####Outside
->>>>>>> master
 
 - M22 5EJ
 - G2 4ER
