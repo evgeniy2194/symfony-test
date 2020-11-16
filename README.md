@@ -1,4 +1,4 @@
-#### Setup Test Environment
+## Setup Test Environment
 
 To start the Docker image you can use the following commands:
 
@@ -12,7 +12,7 @@ To start the Docker image you can use the following commands:
 
 - View site at: http://local.symfonytest.com:92/ (you will need to change your hosts file)
 
-#### The Test
+## The Test
 
 Create a page that has a form with an input to put in a UK Postcode. Upon submitting this check to see if the postcode 
 is within the M25 area, in the `data` folder you will find a list of the start of postcodes within the M25 to use.
@@ -26,14 +26,14 @@ Examples of postcodes within and outside the M25 are as follows, you can't rely 
 
 Bonus marks if you can also identify if an invalid Postcode has been entered
 
-#####Within
+####Within
 
 - SW11 2RD
 - W1B2QD
 - E17 4RD
 - NW1 2AR
 
-#####Outside
+####Outside
 
 - M22 5EJ
 - G2 4ER
