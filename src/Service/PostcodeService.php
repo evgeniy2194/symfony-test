@@ -32,7 +32,7 @@ class PostcodeService
      * @param string $postcode
      * @return bool
      */
-    public function isPostcodeValid(string $postcode): bool
+    public function isPostcodeValid(?string $postcode): bool
     {
         $code = $this->trimPostcode($postcode);
 
@@ -43,7 +43,7 @@ class PostcodeService
      * @param string $postcode
      * @return bool
      */
-    public function isPostcodeM25(string $postcode): bool
+    public function isPostcodeM25(?string $postcode): bool
     {
         $code = $this->trimPostcode($postcode);
 
@@ -60,7 +60,7 @@ class PostcodeService
      * @param string $postcode
      * @return string|string[]
      */
-    private function trimPostcode(string $postcode)
+    private function trimPostcode(?string $postcode)
     {
         return strtoupper(str_replace(' ', '', $postcode));
     }
@@ -70,9 +70,12 @@ class PostcodeService
      */
     private function loadPostcodes()
     {
-        $content = file_get_contents($this->projectDir . '/data/m25Postcodes.md');
-        $codes = json_decode($content);
+        try {
+            $content = file_get_contents($this->projectDir . '/data/m25Postcodes.md');
+            $codes = json_decode($content);
+            $this->codes = $codes;
+        } catch (\Exception $exception) {
 
-        $this->codes = $codes;
+        }
     }
 }

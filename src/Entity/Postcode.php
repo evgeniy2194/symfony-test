@@ -13,7 +13,7 @@ class Postcode
      * @Assert\NotNull
      * @Constraints\ContainsPostcode
      */
-    protected $postcode;
+    protected $postcode = "";
 
     /**
      * @return mixed
